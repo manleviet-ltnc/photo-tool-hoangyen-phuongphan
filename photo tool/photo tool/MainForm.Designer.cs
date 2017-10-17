@@ -96,7 +96,7 @@
             this.mnuPrevious});
             this.ctxMenuPhoto.Name = "ctxMenuPhoto";
             this.ctxMenuPhoto.OwnerItem = this.mnuView;
-            this.ctxMenuPhoto.Size = new System.Drawing.Size(193, 98);
+            this.ctxMenuPhoto.Size = new System.Drawing.Size(193, 76);
             this.ctxMenuPhoto.Opening += new System.ComponentModel.CancelEventHandler(this.ctxMenuPhoto_Opening);
             // 
             // mnuViewImage
@@ -202,7 +202,7 @@
             this.mnuFileNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuFileNew.Name = "mnuFileNew";
             this.mnuFileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.mnuFileNew.Size = new System.Drawing.Size(160, 30);
+            this.mnuFileNew.Size = new System.Drawing.Size(146, 22);
             this.mnuFileNew.Text = "&New";
             this.mnuFileNew.Click += new System.EventHandler(this.mnuFileNew_Click);
             // 
@@ -212,14 +212,14 @@
             this.mnuFileOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuFileOpen.Name = "mnuFileOpen";
             this.mnuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.mnuFileOpen.Size = new System.Drawing.Size(160, 30);
+            this.mnuFileOpen.Size = new System.Drawing.Size(146, 22);
             this.mnuFileOpen.Text = "&Open";
             this.mnuFileOpen.Click += new System.EventHandler(this.mnuFileOpen_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
             // 
             // mnuFileSave
             // 
@@ -227,21 +227,21 @@
             this.mnuFileSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuFileSave.Name = "mnuFileSave";
             this.mnuFileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.mnuFileSave.Size = new System.Drawing.Size(160, 30);
+            this.mnuFileSave.Size = new System.Drawing.Size(146, 22);
             this.mnuFileSave.Text = "&Save";
             this.mnuFileSave.Click += new System.EventHandler(this.mnuFileSave_Click);
             // 
             // mnuFileSaveAs
             // 
             this.mnuFileSaveAs.Name = "mnuFileSaveAs";
-            this.mnuFileSaveAs.Size = new System.Drawing.Size(160, 30);
+            this.mnuFileSaveAs.Size = new System.Drawing.Size(146, 22);
             this.mnuFileSaveAs.Text = "Save &As";
             this.mnuFileSaveAs.Click += new System.EventHandler(this.mnuFileSaveAs_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
             // 
             // mnuFilePrint
             // 
@@ -249,7 +249,7 @@
             this.mnuFilePrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuFilePrint.Name = "mnuFilePrint";
             this.mnuFilePrint.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.mnuFilePrint.Size = new System.Drawing.Size(160, 30);
+            this.mnuFilePrint.Size = new System.Drawing.Size(146, 22);
             this.mnuFilePrint.Text = "&Print";
             // 
             // mnuFilePrintPreview
@@ -257,18 +257,18 @@
             this.mnuFilePrintPreview.Image = ((System.Drawing.Image)(resources.GetObject("mnuFilePrintPreview.Image")));
             this.mnuFilePrintPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mnuFilePrintPreview.Name = "mnuFilePrintPreview";
-            this.mnuFilePrintPreview.Size = new System.Drawing.Size(160, 30);
+            this.mnuFilePrintPreview.Size = new System.Drawing.Size(146, 22);
             this.mnuFilePrintPreview.Text = "Print Pre&view";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(143, 6);
             // 
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(160, 30);
+            this.mnuFileExit.Size = new System.Drawing.Size(146, 22);
             this.mnuFileExit.Text = "E&xit";
             this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 
@@ -328,7 +328,7 @@
             this.mnuEditAdd.Name = "mnuEditAdd";
             this.mnuEditAdd.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.A)));
-            this.mnuEditAdd.Size = new System.Drawing.Size(198, 30);
+            this.mnuEditAdd.Size = new System.Drawing.Size(190, 22);
             this.mnuEditAdd.Text = "Ad&d";
             this.mnuEditAdd.Click += new System.EventHandler(this.mnuEditAdd_Click);
             // 
@@ -337,7 +337,7 @@
             this.mnuEditRemove.Name = "mnuEditRemove";
             this.mnuEditRemove.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.R)));
-            this.mnuEditRemove.Size = new System.Drawing.Size(198, 30);
+            this.mnuEditRemove.Size = new System.Drawing.Size(190, 22);
             this.mnuEditRemove.Text = "Remo&ve";
             this.mnuEditRemove.Click += new System.EventHandler(this.mnuEditRemove_Click);
             // 
@@ -380,7 +380,6 @@
             this.sttInfo.AutoSize = false;
             this.sttInfo.Name = "sttInfo";
             this.sttInfo.Size = new System.Drawing.Size(348, 29);
-            this.sttInfo.Spring = true;
             this.sttInfo.Text = "Desc";
             this.sttInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
