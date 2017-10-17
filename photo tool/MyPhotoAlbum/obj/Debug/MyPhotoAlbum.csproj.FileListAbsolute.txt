@@ -1,0 +1,6 @@
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyPhotoAlbum\bin\Debug\MyPhotoAlbum.dll
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyPhotoAlbum\bin\Debug\MyPhotoAlbum.pdb
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.csprojResolveAssemblyReference.cache
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.csproj.CoreCompileInputs.cache
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.dll
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.pdb
