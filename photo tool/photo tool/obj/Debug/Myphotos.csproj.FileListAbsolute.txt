@@ -20,3 +20,4 @@ F:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\obj\Debug\photo t
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\obj\Debug\photo tool.pdb
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\bin\Debug\MyPhotoAlbum.dll
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\bin\Debug\MyPhotoAlbum.pdb
+D:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\obj\Debug\photo_tool.PixelDialog.resources
