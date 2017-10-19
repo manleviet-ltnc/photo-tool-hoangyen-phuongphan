@@ -73,7 +73,7 @@ namespace Manning.MyPhotoAlbum
         }
 
         private string _notes = "";
-        public string Note
+        public string Notes
         {
             get { return _notes; }
             set

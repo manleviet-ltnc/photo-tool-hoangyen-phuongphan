@@ -106,11 +106,12 @@ namespace Manning.MyphotoControls
             {
                 DialogResult result = MessageBox.Show("The Date Taken entry is invalid or"
                                                       + " in the future and may be ignored."
-                                                      + " Do you wwish to correct this?"
+                                                      + " Do you wwish to correct this?",
                                                       "Photo Properties",
                                                       MessageBoxButtons.YesNo,
                                                       MessageBoxIcon.Question);
                 e.Cancel = (result == DialogResult.Yes);
+
             }
         }
     }

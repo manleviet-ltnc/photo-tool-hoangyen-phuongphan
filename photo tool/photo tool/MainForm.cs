@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Manning.MyPhotoAlbum;
-using Manning.MyPhotoControls;
+using Manning.MyphotoControls;
 
 namespace photo_tool
 {

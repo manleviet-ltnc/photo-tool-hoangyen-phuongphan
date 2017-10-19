@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myphotos", "photo tool\Myphotos.csproj", "{CD6859C0-6EC6-4B17-A204-0C592839D9F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotos", "photo tool\MyPhotos.csproj", "{CD6859C0-6EC6-4B17-A204-0C592839D9F7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotoAlbum", "MyPhotoAlbum\MyPhotoAlbum.csproj", "{9907A120-3BA9-434A-9DD7-86D238CDB584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyphotoControls", "MyphotoControls\MyphotoControls.csproj", "{FDF33DB1-E771-49BD-9523-C42FA410A15A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotoControls", "MyphotoControls\MyPhotoControls.csproj", "{FDF33DB1-E771-49BD-9523-C42FA410A15A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
