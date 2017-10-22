@@ -25,12 +25,12 @@ namespace Manning.MyphotoControls
         {
             InitializeComponent();
         }
-        public PhotoEditDialog (Photograph photo) : this()
+        public PhotoEditDialog(Photograph photo) : this()
         {
             if (photo == null)
                 throw new ArgumentNullException("The photo parameter cannot be null");
             InitializeDialog(photo);
-           
+
         }
         public PhotoEditDialog(AlbumManager mgr) : this()
         {
@@ -45,7 +45,7 @@ namespace Manning.MyphotoControls
         {
             _photo = photo;
             ResetDialog();
-            mskDateTaken.ValidatingType = typeof(CurrentDate);
+            mskDateTaken.ValidatingType = typeof(CurentDate);
         }
 
         protected override void ResetDialog()
@@ -69,7 +69,7 @@ namespace Manning.MyphotoControls
         private void SaveSettings()
         {
             Photograph photo = Photo;
-            if ( photo != null)
+            if (photo != null)
             {
                 photo.Caption = txtCaption.Text;
                 photo.Photographer = txtPhotographer.Text;
@@ -81,7 +81,7 @@ namespace Manning.MyphotoControls
                 catch (FormatException) { }
             }
         }
-        
+
 
         private void txtCaption_TextChanged(object sender, EventArgs e)
         {
@@ -112,6 +112,36 @@ namespace Manning.MyphotoControls
                                                       MessageBoxIcon.Question);
                 e.Cancel = (result == DialogResult.Yes);
 
+            }
+        }
+      
+        private void txtCaption_TextChanged_1(object sender, EventArgs e)
+        {
+            Text = txtCaption.Text + "..Propertier ";
+        }
+
+        private static class  CurentDate
+        {
+            public static DateTime Parse(string input)
+            {
+                DateTime result = DateTime.Parse(input);
+                if (result > DateTime.Now)
+                    throw new FormatException("The given date is in the future");
+                return result;
+            }
+        }
+
+        private void mskDateTaken_TypeValidationCompleted_1(object sender, TypeValidationEventArgs e)
+        {
+            if (!e.IsValidInput)
+            {
+                DialogResult result = MessageBox.Show("The Date taken entry is invalid or"
+                                                        + "in the future and may be ignored."
+                                                        + " Do you wish to correct this?",
+                                                         " Photo Properties",
+                                                        MessageBoxButtons.YesNo,
+                                                        MessageBoxIcon.Question);
+                e.Cancel = (result == DialogResult.Yes);
             }
         }
     }

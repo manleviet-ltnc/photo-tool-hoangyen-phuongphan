@@ -58,7 +58,8 @@
             this.tableLayoutPanel1.Controls.Add(this.lblX, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-4, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 11);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -66,17 +67,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(210, 229);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(165, 162);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // lblBlue
             // 
             this.lblBlue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBlue.Location = new System.Drawing.Point(120, 189);
-            this.lblBlue.Margin = new System.Windows.Forms.Padding(15, 9, 3, 0);
+            this.lblBlue.Location = new System.Drawing.Point(92, 134);
+            this.lblBlue.Margin = new System.Windows.Forms.Padding(10, 6, 2, 0);
             this.lblBlue.Name = "lblBlue";
-            this.lblBlue.Size = new System.Drawing.Size(50, 20);
+            this.lblBlue.Size = new System.Drawing.Size(33, 13);
             this.lblBlue.TabIndex = 9;
             this.lblBlue.Text = "label10";
             this.lblBlue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,9 +86,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(3, 180);
+            this.label9.Location = new System.Drawing.Point(2, 128);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 49);
+            this.label9.Size = new System.Drawing.Size(78, 34);
             this.label9.TabIndex = 8;
             this.label9.Text = "Blue:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -95,10 +97,10 @@
             // lblGreen
             // 
             this.lblGreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblGreen.Location = new System.Drawing.Point(120, 144);
-            this.lblGreen.Margin = new System.Windows.Forms.Padding(15, 9, 3, 0);
+            this.lblGreen.Location = new System.Drawing.Point(92, 102);
+            this.lblGreen.Margin = new System.Windows.Forms.Padding(10, 6, 2, 0);
             this.lblGreen.Name = "lblGreen";
-            this.lblGreen.Size = new System.Drawing.Size(50, 20);
+            this.lblGreen.Size = new System.Drawing.Size(33, 13);
             this.lblGreen.TabIndex = 7;
             this.lblGreen.Text = "label8";
             this.lblGreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,9 +109,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(3, 135);
+            this.label7.Location = new System.Drawing.Point(2, 96);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 45);
+            this.label7.Size = new System.Drawing.Size(78, 32);
             this.label7.TabIndex = 6;
             this.label7.Text = "Green:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,10 +120,10 @@
             // lblRed
             // 
             this.lblRed.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRed.Location = new System.Drawing.Point(120, 99);
-            this.lblRed.Margin = new System.Windows.Forms.Padding(15, 9, 3, 0);
+            this.lblRed.Location = new System.Drawing.Point(92, 70);
+            this.lblRed.Margin = new System.Windows.Forms.Padding(10, 6, 2, 0);
             this.lblRed.Name = "lblRed";
-            this.lblRed.Size = new System.Drawing.Size(50, 20);
+            this.lblRed.Size = new System.Drawing.Size(33, 13);
             this.lblRed.TabIndex = 5;
             this.lblRed.Text = "label6";
             this.lblRed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,9 +132,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(3, 90);
+            this.label5.Location = new System.Drawing.Point(2, 64);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 45);
+            this.label5.Size = new System.Drawing.Size(78, 32);
             this.label5.TabIndex = 4;
             this.label5.Text = "Red:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,10 +143,10 @@
             // lblY
             // 
             this.lblY.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblY.Location = new System.Drawing.Point(120, 54);
-            this.lblY.Margin = new System.Windows.Forms.Padding(15, 9, 3, 0);
+            this.lblY.Location = new System.Drawing.Point(92, 38);
+            this.lblY.Margin = new System.Windows.Forms.Padding(10, 6, 2, 0);
             this.lblY.Name = "lblY";
-            this.lblY.Size = new System.Drawing.Size(50, 20);
+            this.lblY.Size = new System.Drawing.Size(33, 13);
             this.lblY.TabIndex = 3;
             this.lblY.Text = "label4";
             this.lblY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,10 +154,10 @@
             // lblX
             // 
             this.lblX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblX.Location = new System.Drawing.Point(120, 9);
-            this.lblX.Margin = new System.Windows.Forms.Padding(15, 9, 3, 0);
+            this.lblX.Location = new System.Drawing.Point(92, 6);
+            this.lblX.Margin = new System.Windows.Forms.Padding(10, 6, 2, 0);
             this.lblX.Name = "lblX";
-            this.lblX.Size = new System.Drawing.Size(50, 20);
+            this.lblX.Size = new System.Drawing.Size(33, 13);
             this.lblX.TabIndex = 1;
             this.lblX.Text = "label2";
             this.lblX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -162,9 +166,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 45);
+            this.label1.Size = new System.Drawing.Size(78, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "X:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,9 +178,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 45);
+            this.label3.Location = new System.Drawing.Point(2, 32);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 45);
+            this.label3.Size = new System.Drawing.Size(78, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Y:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,9 +189,10 @@
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(65, 235);
+            this.btnClose.Location = new System.Drawing.Point(77, 177);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 28);
+            this.btnClose.Size = new System.Drawing.Size(59, 27);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -194,13 +201,14 @@
             // PixelDialog
             // 
             this.AcceptButton = this.btnClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(208, 263);
+            this.ClientSize = new System.Drawing.Size(209, 215);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PixelDialog";
             this.Text = "Pixel Values";
             this.tableLayoutPanel1.ResumeLayout(false);

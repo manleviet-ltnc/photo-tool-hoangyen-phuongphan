@@ -24,3 +24,5 @@ D:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\bin\Debug\MyPhoto
 D:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\bin\Debug\MyphotoControls.dll
 D:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\bin\Debug\MyPhotoAlbum.pdb
 D:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\bin\Debug\MyphotoControls.pdb
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\bin\Debug\MyphotoControls.dll
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\photo tool\bin\Debug\MyphotoControls.pdb
