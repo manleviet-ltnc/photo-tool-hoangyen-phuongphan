@@ -10,7 +10,7 @@ using System.Collections;
 namespace Manning.MyphotoControls
 {
     [ProvideProperty("FlybyText", typeof(ToolStripMenuItem))]
-    class FlybyTextProvider : Component, IExtenderProvider
+    public class FlybyTextProvider : Component, IExtenderProvider
     {
         public FlybyTextProvider(IContainer container)
         {
@@ -36,6 +36,7 @@ namespace Manning.MyphotoControls
             get { return _currentText; }
             set { _currentText = value; }
         }
+
 
         public bool CanExtend(object extendee)
         {

@@ -162,6 +162,19 @@ namespace photo_tool
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 string path = dlg.FileName;
+                string pwd = null;
+
+                //Get Password if encrypted
+                if( AlbumStorage.IsEncryted(path))
+                {
+                    using (AlbumPasswordDialog pwdDlg = new AlbumPasswordDialog())
+                    {
+                        pwdDlg.Album = path;
+                        if (pwdDlg.ShowDialog() != DialogResult.OK)
+                            return;  // Open cancelled
+                        pwd = pwdDlg.Password;
+                    }
+                }
 
                 if (!SaveAndCloseAlbum())
                     return;
@@ -170,7 +183,7 @@ namespace photo_tool
                 {
                     // Open the new album
                     
-                    Manager = new AlbumManager(path);
+                    Manager = new AlbumManager(path, pwd);
                 }
                 catch (AlbumStorageExeption aex)
                 {

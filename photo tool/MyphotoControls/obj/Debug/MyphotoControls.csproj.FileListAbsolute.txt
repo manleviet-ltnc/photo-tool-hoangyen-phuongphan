@@ -15,11 +15,12 @@ F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\bin\Debug\My
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\bin\Debug\MyPhotoAlbum.dll
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\bin\Debug\MyPhotoAlbum.pdb
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\MyPhotoControls.csprojResolveAssemblyReference.cache
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\Manning.MyphotoControls.AlbumEditDialog.resources
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\Manning.MyphotoControls.BaseEditDialog.resources
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\Manning.MyphotoControls.PhotoEditDialog.resources
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\photo_tool.PixelDialog.resources
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\MyPhotoControls.csproj.GenerateResource.Cache
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\MyPhotoControls.csproj.CoreCompileInputs.cache
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\MyphotoControls.dll
 F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\MyphotoControls.pdb
-F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\Manning.MyphotoControls.PhotoEditDialog.resources
-F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\Manning.MyphotoControls.AlbumEditDialog.resources
+F:\github\photo-tool-hoangyen-phuongphan\photo tool\MyphotoControls\obj\Debug\Manning.MyphotoControls.AlbumPasswordDialog.resources
