@@ -1,0 +1,6 @@
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoAlbum\bin\Debug\MyPhotoAlbum.dll
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoAlbum\bin\Debug\MyPhotoAlbum.pdb
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.csprojResolveAssemblyReference.cache
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.csproj.CoreCompileInputs.cache
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.dll
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.pdb
