@@ -12,3 +12,20 @@ E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyAlbumEditor\M
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.csproj.CoreCompileInputs.cache
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.exe
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.pdb
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyAlbumEditor.exe.config
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyAlbumEditor.exe
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyAlbumEditor.pdb
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyPhotoAlbum.dll
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyPhotoControls.dll
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyPhotoAlbum.pdb
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyPhotoControls.pdb
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.csprojResolveAssemblyReference.cache
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.EditorForm.resources
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.Properties.Resources.resources
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.csproj.GenerateResource.Cache
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.csproj.CoreCompileInputs.cache
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.exe
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.pdb
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.AlbumCalendar.resources
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.AlbumImage.resources
+F:\github\photo-tool-hoangyen-phuongphan\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.WorkerProgressDialog.resources
