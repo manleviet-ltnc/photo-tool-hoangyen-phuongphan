@@ -29,9 +29,9 @@ namespace Manning.MyPhotoControls
             InitializeComponent();
 
             // Define dialog results for link labels
-            IButtonControl btn = (IButtonControl)lnkOK;
+            IButtonControl btn = (IButtonControl)llblOK;
             btn.DialogResult = DialogResult.OK;
-            btn = (IButtonControl)lnkCancel;
+            btn = (IButtonControl)llblCancel;
             btn.DialogResult = DialogResult.Cancel;
         }
 

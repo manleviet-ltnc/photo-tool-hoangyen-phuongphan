@@ -69,8 +69,19 @@ namespace Manning.MyPhotoControls
                     break;
             }
 
+            // Extract color at calculated position
             Color c = bmp.GetPixel(x, y);
+
+            // Update dialog values
             SetPixelData(x, y, c.R, c.G, c.B);
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            Visible = false;
+            if (Owner != null)
+                Owner.Activate();
+            base.OnFormClosed(e);
         }
     }
 }

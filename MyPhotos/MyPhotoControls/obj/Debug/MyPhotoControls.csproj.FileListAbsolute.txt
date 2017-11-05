@@ -12,17 +12,3 @@ E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhot
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PhotoEditDialog.resources
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumEditDialog.resources
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumPasswordDialog.resources
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\bin\Debug\MyPhotoControls.dll
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\bin\Debug\MyPhotoControls.pdb
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\bin\Debug\MyPhotoAlbum.dll
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\bin\Debug\MyPhotoAlbum.pdb
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\MyPhotoControls.csprojResolveAssemblyReference.cache
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumEditDialog.resources
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumPasswordDialog.resources
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.BaseEditDialog.resources
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PhotoEditDialog.resources
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PixelDialog.resources
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.GenerateResource.Cache
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.CoreCompileInputs.cache
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\MyPhotoControls.dll
-F:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotoControls\obj\Debug\MyPhotoControls.pdb

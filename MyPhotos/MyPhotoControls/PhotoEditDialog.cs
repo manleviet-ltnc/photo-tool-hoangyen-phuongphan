@@ -72,7 +72,7 @@ namespace Manning.MyPhotoControls
             {
                 txtPhotoFile.Text = photo.FileName;
                 txtCaption.Text = photo.Caption;
-                dtpDateTakens.Value = photo.DateTaken;
+                dtmDateTaken.Value = photo.DateTaken;
                 cboPhotographer.Text = photo.Photographer;
                 txtNotes.Text = photo.Notes;
             }
@@ -94,7 +94,7 @@ namespace Manning.MyPhotoControls
                 photo.Notes = txtNotes.Text;
                 try
                 {
-                    photo.DateTaken = dtpDateTakens.Value;
+                    photo.DateTaken = dtmDateTaken.Value;
                 }
                 catch (FormatException) { }
             }

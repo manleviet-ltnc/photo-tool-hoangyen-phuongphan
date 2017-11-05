@@ -36,7 +36,7 @@
             this.txtPhotoFile = new System.Windows.Forms.TextBox();
             this.txtCaption = new System.Windows.Forms.TextBox();
             this.cboPhotographer = new System.Windows.Forms.ComboBox();
-            this.dtpDateTakens = new System.Windows.Forms.DateTimePicker();
+            this.dtmDateTaken = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             this.tblPanel.Controls.Add(this.txtPhotoFile, 1, 0);
             this.tblPanel.Controls.Add(this.txtCaption, 1, 1);
             this.tblPanel.Controls.Add(this.cboPhotographer, 1, 3);
-            this.tblPanel.Controls.Add(this.dtpDateTakens, 1, 2);
+            this.tblPanel.Controls.Add(this.dtmDateTaken, 1, 2);
             this.tblPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel.Location = new System.Drawing.Point(0, 0);
             this.tblPanel.Name = "tblPanel";
@@ -144,14 +144,14 @@
             this.cboPhotographer.TabIndex = 7;
             this.cboPhotographer.Leave += new System.EventHandler(this.cboPhotographer_Leave);
             // 
-            // dtpDateTakens
+            // dtmDateTaken
             // 
-            this.dtpDateTakens.CustomFormat = "mm/dd/yy \'at\' h:mm tt";
-            this.dtpDateTakens.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateTakens.Location = new System.Drawing.Point(93, 63);
-            this.dtpDateTakens.Name = "dtpDateTakens";
-            this.dtpDateTakens.Size = new System.Drawing.Size(162, 20);
-            this.dtpDateTakens.TabIndex = 5;
+            this.dtmDateTaken.CustomFormat = "MM/dd/yy \'at\' h:mm tt";
+            this.dtmDateTaken.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmDateTaken.Location = new System.Drawing.Point(93, 63);
+            this.dtmDateTaken.Name = "dtmDateTaken";
+            this.dtmDateTaken.Size = new System.Drawing.Size(162, 20);
+            this.dtmDateTaken.TabIndex = 5;
             // 
             // label5
             // 
@@ -203,6 +203,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.ComboBox cboPhotographer;
-        private System.Windows.Forms.DateTimePicker dtpDateTakens;
+        private System.Windows.Forms.DateTimePicker dtmDateTaken;
     }
 }

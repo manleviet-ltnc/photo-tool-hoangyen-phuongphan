@@ -18,7 +18,11 @@ namespace MyPhotos
         private AlbumManager Manager
         {
             get { return _manager; }
-            set { _manager = value; }
+            set
+            {
+                _manager = value;
+                AssignSelectDropDown();
+            }
         }
 
         public MainForm()
@@ -303,6 +307,7 @@ namespace MyPhotos
             mnuPrevious.Enabled = (Manager.Index > 0);
             mnuPhotoProps.Enabled = (Manager.Current != null);
             mnuAlbumProps.Enabled = (Manager.Album != null);
+            mnuSlideShow.Enabled = (Manager.Album != null && Manager.Album.Count > 0);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -325,6 +330,7 @@ namespace MyPhotos
             PixelForm.Show();
             Point p = pbxPhoto.PointToClient(MousePosition);
             UpdatePixelDialog(p.X, p.Y);
+            UpdatePixelButton(true);
         }
 
         private void UpdatePixelDialog(int x, int y)
@@ -418,6 +424,110 @@ namespace MyPhotos
                         return true;
                 }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void mnuSlideShow_Click(object sender, EventArgs e)
+        {
+            using (SlideShowDialog dlg = new SlideShowDialog(Manager))
+            {
+                dlg.ShowDialog();
+            }
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            tsbNew.Tag = mnuFileNew;
+            tsbOpen.Tag = mnuFileOpen;
+            tsbSave.Tag = mnuFileSave;
+            tsbPrint.Tag = mnuFilePrint;
+            tsbCut.Tag = mnuEditCut;
+            tsbCopy.Tag = mnuEditCopy;
+            tsbPaste.Tag = mnuEditPaste;
+            tsbPrevious.Tag = mnuPrevious;
+            tsbNext.Tag = mnuNext;
+            tsbHelp.Tag = mnuHelpAbout;
+
+            toolStripMain.ImageList = imageListArrows;
+            tsbPrevious.ImageIndex = 1;
+            tsbNext.ImageIndex = 0;
+
+            tsbAlbumProps.Tag = mnuAlbumProps;
+            tsbPhotoProps.Tag = mnuPhotoProps;
+            tsbPixelData.Tag = tsbPixelData.Image;
+
+            tsdImage.DropDown = mnuImage.DropDown;
+
+            base.OnLoad(e);
+        }
+
+        private void tbs_Click(object sender, EventArgs e)
+        {
+            // Ensure sender is a menu item
+            ToolStripItem item = sender as ToolStripItem;
+            if (item != null)
+            {
+                ToolStripMenuItem mi = item.Tag as ToolStripMenuItem;
+                if (mi != null)
+                    mi.PerformClick();
+            }
+        }
+
+        private void tsbPixelData_Click(object sender, EventArgs e)
+        {
+            Form f = PixelForm;
+            if (f == null || f.IsDisposed || !f.Visible)
+                mnuPixelData.PerformClick();
+            else
+                f.Hide();
+            UpdatePixelButton(PixelForm.Visible);
+        }
+
+        private void UpdatePixelButton(bool visible)
+        {
+            tsbPixelData.Checked = visible;
+            if (visible)
+                tsbPixelData.Image = tsbPixelData2.Image;
+            else
+                tsbPixelData.Image = (Image)tsbPixelData.Tag;
+        }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            if (_dlgPixel != null)
+                UpdatePixelButton(_dlgPixel.Visible);
+            base.OnActivated(e);
+        }
+
+        private void AssignSelectDropDown()
+        {
+            ToolStripDropDown drop = new ToolStripDropDown();
+            PhotoAlbum a = Manager.Album;
+            for (int i = 0; i < a.Count; i++)
+            {
+                PictureBox box = new PictureBox();
+                box.SizeMode = PictureBoxSizeMode.Zoom;
+                box.Image = a[i].Image;
+                box.Dock = DockStyle.Fill;
+
+                ToolStripControlHost host = new ToolStripControlHost(box);
+                host.AutoSize = false;
+                host.Size = new Size(tssSelect.Width, tssSelect.Width);
+                host.Tag = i;
+                host.Click += delegate (object o, EventArgs e)
+                {
+                    int x = (int)(o as ToolStripItem).Tag;
+                    Manager.Index = x;
+                    drop.Close();
+                    DisplayAlbum();
+                };
+                drop.Items.Add(host);
+            }
+
+            if (drop.Items.Count > 0)
+            {
+                tssSelect.DropDown = drop;
+                tssSelect.DefaultItem = drop.Items[0];
+            }
         }
     }
 }

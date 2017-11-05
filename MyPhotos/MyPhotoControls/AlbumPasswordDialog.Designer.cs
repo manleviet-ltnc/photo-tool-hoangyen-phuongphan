@@ -32,8 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtAlbum = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lnkOK = new System.Windows.Forms.LinkLabel();
-            this.lnkCancel = new System.Windows.Forms.LinkLabel();
+            this.llblOK = new System.Windows.Forms.LinkLabel();
+            this.llblCancel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -70,38 +70,38 @@
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // lnkOK
+            // llblOK
             // 
-            this.lnkOK.AutoSize = true;
-            this.lnkOK.Location = new System.Drawing.Point(12, 75);
-            this.lnkOK.Name = "lnkOK";
-            this.lnkOK.Size = new System.Drawing.Size(22, 13);
-            this.lnkOK.TabIndex = 4;
-            this.lnkOK.TabStop = true;
-            this.lnkOK.Text = "OK";
-            this.lnkOK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_LinkClicked);
+            this.llblOK.AutoSize = true;
+            this.llblOK.Location = new System.Drawing.Point(12, 75);
+            this.llblOK.Name = "llblOK";
+            this.llblOK.Size = new System.Drawing.Size(22, 13);
+            this.llblOK.TabIndex = 4;
+            this.llblOK.TabStop = true;
+            this.llblOK.Text = "OK";
+            this.llblOK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_LinkClicked);
             // 
-            // lnkCancel
+            // llblCancel
             // 
-            this.lnkCancel.AutoSize = true;
-            this.lnkCancel.Location = new System.Drawing.Point(217, 75);
-            this.lnkCancel.Name = "lnkCancel";
-            this.lnkCancel.Size = new System.Drawing.Size(40, 13);
-            this.lnkCancel.TabIndex = 5;
-            this.lnkCancel.TabStop = true;
-            this.lnkCancel.Text = "Cancel";
-            this.lnkCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_LinkClicked);
+            this.llblCancel.AutoSize = true;
+            this.llblCancel.Location = new System.Drawing.Point(217, 75);
+            this.llblCancel.Name = "llblCancel";
+            this.llblCancel.Size = new System.Drawing.Size(40, 13);
+            this.llblCancel.TabIndex = 5;
+            this.llblCancel.TabStop = true;
+            this.llblCancel.Text = "Cancel";
+            this.llblCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_LinkClicked);
             // 
             // AlbumPasswordDialog
             // 
-            this.AcceptButton = this.lnkOK;
+            this.AcceptButton = this.llblOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.lnkCancel;
+            this.CancelButton = this.llblCancel;
             this.ClientSize = new System.Drawing.Size(269, 97);
             this.ControlBox = false;
-            this.Controls.Add(this.lnkCancel);
-            this.Controls.Add(this.lnkOK);
+            this.Controls.Add(this.llblCancel);
+            this.Controls.Add(this.llblOK);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtAlbum);
             this.Controls.Add(this.label2);
@@ -121,7 +121,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAlbum;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.LinkLabel lnkOK;
-        private System.Windows.Forms.LinkLabel lnkCancel;
+        private System.Windows.Forms.LinkLabel llblOK;
+        private System.Windows.Forms.LinkLabel llblCancel;
     }
 }

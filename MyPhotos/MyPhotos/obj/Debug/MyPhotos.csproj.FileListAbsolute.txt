@@ -12,3 +12,4 @@ E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhot
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\bin\Debug\MyPhotoAlbum.pdb
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\bin\Debug\MyPhotoControls.dll
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\bin\Debug\MyPhotoControls.pdb
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\obj\Debug\MyPhotos.SlideShowDialog.resources
