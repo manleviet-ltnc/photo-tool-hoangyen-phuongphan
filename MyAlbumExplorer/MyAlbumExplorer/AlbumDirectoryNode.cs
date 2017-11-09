@@ -27,8 +27,7 @@ namespace MyAlbumExplorer
         {
             get
             {
-                return Directory.GetFiles(
-          AlbumDirectory, "*.abm");
+                return Directory.GetFiles(AlbumDirectory, "*.abm");
             }
         }
 

@@ -90,8 +90,8 @@ namespace MyPhotos
         {
             ComponentResourceManager resources= new ComponentResourceManager(typeof(MainForm));
 
-            Image newImage = (Image)resources.GetObject("menuFileNew.Image");
-            Image openImage = (Image)resources.GetObject("menuFileOpen.Image");
+            Image newImage = (Image)resources.GetObject("mnuFileNew.Image");
+            Image openImage = (Image)resources.GetObject("mnuFileOpen.Image");
             menuFileNew.Image = newImage;
             menuFileOpen.Image = openImage;
             tsbNew.Image = newImage;
@@ -152,5 +152,6 @@ namespace MyPhotos
                 }
             }
         }
+
     }
 }

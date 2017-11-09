@@ -38,12 +38,12 @@
             this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWindowArrange = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripParent = new System.Windows.Forms.ToolStrip();
-            this.tsbNew = new System.Windows.Forms.ToolStripButton();
-            this.tsbOpen = new System.Windows.Forms.ToolStripButton();
             this.menuWindowCascade = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWindowHorizontal = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWindowVertical = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripParent = new System.Windows.Forms.ToolStrip();
+            this.tsbNew = new System.Windows.Forms.ToolStripButton();
+            this.tsbOpen = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStripParent.SuspendLayout();
             this.SuspendLayout();
@@ -124,9 +124,33 @@
             // 
             this.menuWindowArrange.Name = "menuWindowArrange";
             this.menuWindowArrange.Size = new System.Drawing.Size(152, 22);
-            this.menuWindowArrange.Tag = "ArangeIcons";
+            this.menuWindowArrange.Tag = "ArrangeIcons";
             this.menuWindowArrange.Text = "&ArrangeIcons";
             this.menuWindowArrange.Click += new System.EventHandler(this.menuWindowItem_Click);
+            // 
+            // menuWindowCascade
+            // 
+            this.menuWindowCascade.Name = "menuWindowCascade";
+            this.menuWindowCascade.Size = new System.Drawing.Size(152, 22);
+            this.menuWindowCascade.Tag = "Cascade";
+            this.menuWindowCascade.Text = "&Cascade";
+            this.menuWindowCascade.Click += new System.EventHandler(this.menuWindowItem_Click);
+            // 
+            // menuWindowHorizontal
+            // 
+            this.menuWindowHorizontal.Name = "menuWindowHorizontal";
+            this.menuWindowHorizontal.Size = new System.Drawing.Size(152, 22);
+            this.menuWindowHorizontal.Tag = "TileHorizontal";
+            this.menuWindowHorizontal.Text = "Tile &Horizontal";
+            this.menuWindowHorizontal.Click += new System.EventHandler(this.menuWindowItem_Click);
+            // 
+            // menuWindowVertical
+            // 
+            this.menuWindowVertical.Name = "menuWindowVertical";
+            this.menuWindowVertical.Size = new System.Drawing.Size(152, 22);
+            this.menuWindowVertical.Tag = "TileVertical";
+            this.menuWindowVertical.Text = "Tile &Vertical";
+            this.menuWindowVertical.Click += new System.EventHandler(this.menuWindowItem_Click);
             // 
             // toolStripParent
             // 
@@ -162,30 +186,6 @@
             this.tsbOpen.Size = new System.Drawing.Size(23, 22);
             this.tsbOpen.Text = "Open Album";
             this.tsbOpen.Click += new System.EventHandler(this.tsbOpen_Click);
-            // 
-            // menuWindowCascade
-            // 
-            this.menuWindowCascade.Name = "menuWindowCascade";
-            this.menuWindowCascade.Size = new System.Drawing.Size(152, 22);
-            this.menuWindowCascade.Tag = "Cascade";
-            this.menuWindowCascade.Text = "&Cascade";
-            this.menuWindowCascade.Click += new System.EventHandler(this.menuWindowItem_Click);
-            // 
-            // menuWindowHorizontal
-            // 
-            this.menuWindowHorizontal.Name = "menuWindowHorizontal";
-            this.menuWindowHorizontal.Size = new System.Drawing.Size(152, 22);
-            this.menuWindowHorizontal.Tag = "TileHorizontal";
-            this.menuWindowHorizontal.Text = "Tile &Horizontal";
-            this.menuWindowHorizontal.Click += new System.EventHandler(this.menuWindowItem_Click);
-            // 
-            // menuWindowVertical
-            // 
-            this.menuWindowVertical.Name = "menuWindowVertical";
-            this.menuWindowVertical.Size = new System.Drawing.Size(152, 22);
-            this.menuWindowVertical.Tag = "TileVertical";
-            this.menuWindowVertical.Text = "Tile &Vertical";
-            this.menuWindowVertical.Click += new System.EventHandler(this.menuWindowItem_Click);
             // 
             // ParentForm
             // 
