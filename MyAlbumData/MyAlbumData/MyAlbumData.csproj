@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E465BDC5-2C16-49EC-ACA0-04B1A413CFAE}</ProjectGuid>
+    <ProjectGuid>{1118EB2E-DBC0-41B4-B072-E573404739BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MyAlbumData</RootNamespace>
     <AssemblyName>MyAlbumData</AssemblyName>

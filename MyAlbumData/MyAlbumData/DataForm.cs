@@ -10,6 +10,7 @@ using System.IO;
 using System.Windows.Forms;
 using Manning.MyPhotoAlbum;
 using Manning.MyPhotoControls;
+
 namespace MyAlbumData
 {
     public partial class DataForm : Form
@@ -29,29 +30,25 @@ namespace MyAlbumData
         protected override void OnLoad(EventArgs e)
         {
             Version ver = new Version(Application.ProductVersion);
-            Text = String.Format("MyAlbumData "+ "{0:#}.{1:#}", ver.Major, ver.Minor);
+            Text = String.Format("MyAlbumData {0:#}.{1:#}", ver.Major, ver.Minor);
 
             _manager = new AlbumManager();
-
-            cmbAlbum.DataSource = Directory.GetFiles(AlbumManager.DefaultPath, "*.abm");
-
+            cboAlbum.DataSource = Directory.GetFiles(AlbumManager.DefaultPath, "*.abm");
             SetBindings();
-
             OpenAlbum();
             SetDataSources();
         }
 
         private void SetBindings()
         {
-            // Bindings for Album tab
-            gridPhotoAlbum.DataSource = pageAlbum;
-            // Bindings data for Photo tab
-            txtFileName.DataBindings.Add("Text", pageAlbum, "FileName");
-            txtCaption.DataBindings.Add("Text", pageAlbum, "Caption");
-            txtPhotographer.DataBindings.Add("Text", pageAlbum, "Photographer");
-            dtpDateTaken.DataBindings.Add("Value", pageAlbum, "DateTaken");
-            txtNotes.DataBindings.Add("Text", pageAlbum, "Notes");
-            pbxPhoto.DataBindings.Add("Image", pageAlbum, "Image");
+            gridPhotoAlbum.DataSource = bsAlbum;
+
+            txtFileName.DataBindings.Add("Text", bsAlbum, "FileName");
+            txtCaption.DataBindings.Add("Text", bsAlbum, "Caption");
+            txtPhotographer.DataBindings.Add("Text", bsAlbum, "Photographer");
+            dtpDateTaken.DataBindings.Add("Value", bsAlbum, "DateTaken");
+            txtNotes.DataBindings.Add("Text", bsAlbum, "Notes");
+            pbxPhoto.DataBindings.Add("Image", bsAlbum, "Image");
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -59,7 +56,7 @@ namespace MyAlbumData
             Close();
         }
 
-        private void cmbAlbum_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboAlbum_SelectionChangeCommitted(object sender, EventArgs e)
         {
             OpenAlbum();
             SetDataSources();
@@ -67,7 +64,7 @@ namespace MyAlbumData
 
         private void OpenAlbum()
         {
-            string albumPath= cmbAlbum.SelectedItem.ToString();
+            string albumPath = cboAlbum.SelectedItem.ToString();
             if (Manager.FullName == albumPath)
                 return;
             if (CloseAlbum() == false)
@@ -77,7 +74,6 @@ namespace MyAlbumData
             {
                 _manager = new AlbumManager(albumPath);
             }
-
             catch (AlbumStorageException aex)
             {
                 _manager = new AlbumManager();
@@ -91,15 +87,13 @@ namespace MyAlbumData
             {
                 if (Manager.Album.HasChanged)
                 {
-                    DialogResult result
-                    = AlbumController.AskForSave(Manager);
-
+                    DialogResult result = AlbumController.AskForSave(Manager);
                     if (result == DialogResult.Cancel)
-                        return false; // don't dispose
-
+                        return false;   // don't dispose
                     if (result == DialogResult.Yes)
                         Manager.Save();
                 }
+
                 Manager.Album.Dispose();
             }
             return true;
@@ -107,8 +101,7 @@ namespace MyAlbumData
 
         private void SetDataSources()
         {
-            gridPhotoAlbum.DataSource = Manager.Album;
-
+            bsAlbum.DataSource = Manager.Album;
             SetComboColumnDataSource();
         }
 
@@ -123,22 +116,20 @@ namespace MyAlbumData
         {
             gridPhotoAlbum.SuspendLayout();
             gridPhotoAlbum.AutoGenerateColumns = false;
-            gridPhotoAlbum.
-            AlternatingRowsDefaultCellStyle.
-            BackColor = Color.LightGray;
+            gridPhotoAlbum.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
 
-            DataGridViewImageColumn thumbCol= new DataGridViewImageColumn();
+            DataGridViewImageColumn thumbCol = new DataGridViewImageColumn();
             thumbCol.DataPropertyName = "Image";
-            thumbCol.ImageLayout= DataGridViewImageCellLayout.Zoom;
+            thumbCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
             thumbCol.Name = "Image";
             thumbCol.Width = 50;
 
-            DataGridViewColumn captionCol= new DataGridViewTextBoxColumn();
+            DataGridViewColumn captionCol = new DataGridViewTextBoxColumn();
             captionCol.DataPropertyName = "Caption";
-            captionCol.DefaultCellStyle.WrapMode= DataGridViewTriState.True;
+            captionCol.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             captionCol.Name = "Caption";
 
-            DataGridViewColumn takenCol= new DataGridViewTextBoxColumn();
+            DataGridViewColumn takenCol = new DataGridViewTextBoxColumn();
             takenCol.DataPropertyName = "DateTaken";
             takenCol.Name = "Date Taken";
 
@@ -148,20 +139,16 @@ namespace MyAlbumData
             pgCol.MaxDropDownItems = 4;
             pgCol.Name = "Photographer";
 
-            DataGridViewTextBoxColumn fileCol= new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn fileCol = new DataGridViewTextBoxColumn();
             fileCol.DataPropertyName = "FileName";
             fileCol.Name = "File Name";
 
-            gridPhotoAlbum.Columns.AddRange(new DataGridViewColumn[]
-            {
-                thumbCol,
-                captionCol,
-                takenCol,
-                pgCol,
-                fileCol
-            });
+            gridPhotoAlbum.Columns.AddRange(new DataGridViewColumn[] { thumbCol,
+                                                                       captionCol,
+                                                                       takenCol,
+                                                                       pgCol,
+                                                                       fileCol });
             gridPhotoAlbum.ResumeLayout();
-
         }
 
         private void gridPhotoAlbum_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -170,7 +157,6 @@ namespace MyAlbumData
             {
                 DataGridViewRow row = gridPhotoAlbum.Rows[e.RowIndex];
                 DataGridViewCell cell = row.Cells[e.ColumnIndex];
-
                 int dateIndex = gridPhotoAlbum.Columns["Date Taken"].Index;
                 if (dateIndex == e.ColumnIndex)
                     ShowCalendarDropdown(cell);
@@ -178,9 +164,9 @@ namespace MyAlbumData
                 {
                     ContextMenuStrip menu = new ContextMenuStrip();
                     ToolStripItem item = menu.Items.Add("Edit...");
-
                     item.Tag = gridPhotoAlbum.Rows[e.RowIndex];
                     item.Click += new EventHandler(editMenu_Click);
+
                     menu.Show(MousePosition);
                 }
             }
@@ -188,18 +174,15 @@ namespace MyAlbumData
 
         private void editMenu_Click(object sender, EventArgs e)
         {
-            ToolStripItem item= sender as ToolStripItem;
-            if (item != null&& item.Tag is DataGridViewRow)
+            ToolStripItem item = sender as ToolStripItem;
+            if (item != null && item.Tag is DataGridViewRow)
             {
-                DataGridViewRow row= item.Tag as DataGridViewRow;
-
-                Photograph photo= row.DataBoundItem as Photograph;
-                using (PhotoEditDialog dlg= new PhotoEditDialog(photo))
+                DataGridViewRow row = item.Tag as DataGridViewRow;
+                Photograph photo = row.DataBoundItem as Photograph;
+                using (PhotoEditDialog dlg = new PhotoEditDialog(photo))
                 {
-                    if (dlg.ShowDialog() == DialogResult.OK&& photo.HasChanged)
-                    {
+                    if (dlg.ShowDialog() == DialogResult.OK && photo.HasChanged)
                         SetComboColumnDataSource();
-                    }
                 }
             }
         }
@@ -207,24 +190,20 @@ namespace MyAlbumData
         private void ShowCalendarDropdown(DataGridViewCell cell)
         {
             DateTime current = (DateTime)cell.Value;
-
             MonthCalendar cal = new MonthCalendar();
             Panel panel = new Panel();
             Form f = new Form();
 
-            // Initialize calendar control
             cal.MaxSelectionCount = 1;
             cal.SetDate(current);
             cal.DateSelected += new
             DateRangeEventHandler(cal_DateSelected);
 
-            // Embed calendar within panel
             panel.Width = cal.Width + 2;
             panel.Height = cal.Height + 2;
             panel.BorderStyle = BorderStyle.FixedSingle;
             panel.Controls.Add(cal);
 
-            // Place panel in borderless form
             f.FormBorderStyle = FormBorderStyle.None;
             f.ShowInTaskbar = false;
             f.Size = panel.Size;
@@ -234,7 +213,6 @@ namespace MyAlbumData
 
             f.Deactivate += delegate { f.Close(); };
 
-            // Assign selected date during close
             f.FormClosing += delegate
             {
                 if (cal.SelectionStart != current)
@@ -244,7 +222,7 @@ namespace MyAlbumData
             f.Show();
         }
 
-        void cal_DateSelected(object sender, DateRangeEventArgs e)
+        private void cal_DateSelected(object sender, DateRangeEventArgs e)
         {
             MonthCalendar cal = sender as MonthCalendar;
             Form f = cal.FindForm();
@@ -255,6 +233,22 @@ namespace MyAlbumData
         {
             e.Cancel = !CloseAlbum();
             base.OnFormClosing(e);
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            bsAlbum.MovePrevious();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            bsAlbum.MoveNext();
+        }
+
+        private void bsAlbum_CurrentChanged(object sender, EventArgs e)
+        {
+            btnNext.Enabled = (bsAlbum.Position < bsAlbum.Count - 1);
+            btnPrevious.Enabled = (bsAlbum.Position > 0);
         }
     }
 }
