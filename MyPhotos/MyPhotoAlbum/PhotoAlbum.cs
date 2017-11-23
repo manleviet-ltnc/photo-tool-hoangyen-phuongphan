@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+
 namespace Manning.MyPhotoAlbum
 {
     public class PhotoAlbum : BindingList<Photograph>, IDisposable
@@ -88,13 +89,11 @@ namespace Manning.MyPhotoAlbum
         {
             if (Count > 0)
             {
-                {
-                    foreach (Photograph p in this)
-                        p.Modified -= photo_Modified;
-                    Dispose();
-                    base.ClearItems();
-                    HasChanged = true;
-                }
+                foreach (Photograph p in this)
+                    p.Modified -= photo_Modified;
+                Dispose();
+                base.ClearItems();
+                HasChanged = true;
             }
         }
 
@@ -103,7 +102,6 @@ namespace Manning.MyPhotoAlbum
             item.Modified += photo_Modified;
             base.InsertItem(index, item);
             HasChanged = true;
-
         }
 
         protected override void RemoveItem(int index)
@@ -111,7 +109,6 @@ namespace Manning.MyPhotoAlbum
             Photograph p = Items[index];
             p.Modified -= photo_Modified;
             base.RemoveItem(index);
-
             p.ReleaseImage();
             HasChanged = true;
         }

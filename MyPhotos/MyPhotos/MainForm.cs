@@ -15,7 +15,7 @@ namespace MyPhotos
     public partial class MainForm : Form
     {
         private AlbumManager _manager;
-        private AlbumManager Manager
+        internal AlbumManager Manager
         {
             get { return _manager; }
             set
@@ -23,23 +23,6 @@ namespace MyPhotos
                 _manager = value;
                 AssignSelectDropDown();
             }
-        }
-
-        public string AlbumTitle
-        {
-            get { return Manager.Album.Title; }
-        }
-
-        public MainForm()
-        {
-            InitializeComponent();
-            NewAlbum();
-        }
-
-        public MainForm(string path, string pwd) : this()
-        {
-            // Caller must deal with any exception
-            Manager = new AlbumManager(path, pwd);
         }
 
         private PixelDialog _dlgPixel = null;
@@ -59,7 +42,21 @@ namespace MyPhotos
             get { return Manager.FullName; }
         }
 
+        public string AlbumTitle
+        {
+            get { return Manager.Album.Title; }
+        }
 
+        public MainForm()
+        {
+            InitializeComponent();
+            NewAlbum();
+        }
+
+        public MainForm(string path, string pwd) : this()
+        {
+            Manager = new AlbumManager(path, pwd);
+        }
 
         private void NewAlbum()
         {
@@ -483,19 +480,14 @@ namespace MyPhotos
 
             tsdImage.DropDown = mnuImage.DropDown;
 
-            // Adjust form if MDI child
             if (IsMdiChild)
-            {
-                menuStrip.Visible = false;
-                DisplayAlbum();
-            }
-            if (this.IsMdiChild)
             {
                 menuStrip.Visible = false;
                 toolStripMain.Visible = false;
                 DisplayAlbum();
             }
 
+            pbxPhoto.AllowDrop = true;
             base.OnLoad(e);
         }
 
@@ -574,6 +566,86 @@ namespace MyPhotos
             if (IsMdiChild)
                 UpdatePixelButton(PixelDialog.GlobalInstance.Visible);
             base.OnEnter(e);
+        }
+
+        private void mnuFilePrintPreview_Click(object sender, EventArgs e)
+        {
+            PrintSupport.PrintPreview();
+        }
+
+        private void mnuFilePrint_Click(object sender, EventArgs e)
+        {
+            PrintSupport.Print();
+        }
+
+        private void mnuFilePageSetup_Click(object sender, EventArgs e)
+        {
+            PrintSupport.PageSetup();
+        }
+
+        private void pbxPhoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            Photograph photo = Manager.Current;
+            if (photo != null)
+            {
+                DataObject data = new DataObject();
+                string[] fileArray = new string[1];
+                fileArray[0] = photo.FileName;
+                data.SetData(DataFormats.FileDrop, fileArray);
+                data.SetData(DataFormats.Text, photo.Caption);
+                pbxPhoto.DoDragDrop(data, DragDropEffects.Copy);
+            }
+        }
+
+        private void pbxPhoto_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void pbxPhoto_DragDrop(object sender, DragEventArgs e)
+        {
+            object obj = e.Data.GetData(DataFormats.FileDrop);
+            Array files = obj as Array;
+            int index = -1;
+            foreach (object o in files)
+            {
+                string s = o as string;
+                if (s != null)
+                {
+                    Photograph photo = new Photograph(s);
+                    index = Manager.Album.IndexOf(photo);
+                    if (index < 0)
+                    {
+                        Manager.Album.Add(photo);
+                        index = Manager.Album.Count - 1;
+                    }
+                }
+            }
+
+            if (index >= 0)
+            {
+                Manager.Index = index;
+                DisplayAlbum();
+            }
+        }
+
+        private void mnuHelpAbout_Click(object sender, EventArgs e)
+        {
+            using (AboutBox dlg = new AboutBox())
+            {
+                dlg.IsMdiApplication = IsMdiChild;
+                dlg.AboutText = String.Format("MyPhotos Application, Version {0}\n"
+                                              + "Sample for \"Windows Forms in "
+                                              + "Action\" by Erik Brown\n"
+                                              + "Copyright Manning Publications Co.",
+                                              Application.ProductVersion);
+                dlg.Owner = this;
+                dlg.Icon = Icon;
+                dlg.ShowDialog();
+            }
         }
     }
 }

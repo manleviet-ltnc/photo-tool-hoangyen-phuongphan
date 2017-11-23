@@ -25,14 +25,13 @@ namespace Manning.MyPhotoControls
         {
             get
             {
-                if (SharedInstance == null
-                || SharedInstance.IsDisposed)
+                if (SharedInstance == null || SharedInstance.IsDisposed)
                 {
                     SharedInstance = new PixelDialog();
-                    SharedInstance.MdiParent
-                    = GlobalMdiParent;
+                    SharedInstance.MdiParent = GlobalMdiParent;
                     SharedInstance.Visible = false;
                 }
+
                 return SharedInstance;
             }
         }

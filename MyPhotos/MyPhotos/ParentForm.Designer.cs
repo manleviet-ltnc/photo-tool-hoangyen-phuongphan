@@ -29,128 +29,128 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParentForm));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileClose = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuWindow = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuWindowArrange = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuWindowCascade = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuWindowHorizontal = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuWindowVertical = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindow = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowArrange = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowCascade = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowHozizontal = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowVertical = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripParent = new System.Windows.Forms.ToolStrip();
             this.tsbNew = new System.Windows.Forms.ToolStripButton();
             this.tsbOpen = new System.Windows.Forms.ToolStripButton();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.toolStripParent.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuFile,
-            this.menuWindow});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MdiWindowListItem = this.menuWindow;
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFile,
+            this.mnuWindow});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.MdiWindowListItem = this.mnuWindow;
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(584, 24);
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.Text = "menuStrip1";
             // 
-            // menuFile
+            // mnuFile
             // 
-            this.menuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuFileNew,
-            this.menuFileOpen,
-            this.menuFileClose,
+            this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFileNew,
+            this.mnuFileOpen,
+            this.mnuFileClose,
             this.toolStripSeparator1,
-            this.menuFileExit});
-            this.menuFile.Name = "menuFile";
-            this.menuFile.Size = new System.Drawing.Size(37, 20);
-            this.menuFile.Text = "&File";
-            this.menuFile.DropDownOpening += new System.EventHandler(this.menuFile_DropDownOpening);
+            this.mnuFileExit});
+            this.mnuFile.Name = "mnuFile";
+            this.mnuFile.Size = new System.Drawing.Size(37, 20);
+            this.mnuFile.Text = "&File";
+            this.mnuFile.DropDownOpening += new System.EventHandler(this.mnuFile_DropDownOpening);
             // 
-            // menuFileNew
+            // mnuFileNew
             // 
-            this.menuFileNew.Name = "menuFileNew";
-            this.menuFileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuFileNew.Size = new System.Drawing.Size(149, 22);
-            this.menuFileNew.Text = "&New";
-            this.menuFileNew.Click += new System.EventHandler(this.menuFileNew_Click);
+            this.mnuFileNew.Name = "mnuFileNew";
+            this.mnuFileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.mnuFileNew.Size = new System.Drawing.Size(149, 22);
+            this.mnuFileNew.Text = "&New";
+            this.mnuFileNew.Click += new System.EventHandler(this.mnuFileNew_Click);
             // 
-            // menuFileOpen
+            // mnuFileOpen
             // 
-            this.menuFileOpen.Name = "menuFileOpen";
-            this.menuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.menuFileOpen.Size = new System.Drawing.Size(149, 22);
-            this.menuFileOpen.Text = "&Open";
-            this.menuFileOpen.Click += new System.EventHandler(this.menuFileOpen_Click);
+            this.mnuFileOpen.Name = "mnuFileOpen";
+            this.mnuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.mnuFileOpen.Size = new System.Drawing.Size(149, 22);
+            this.mnuFileOpen.Text = "&Open";
+            this.mnuFileOpen.Click += new System.EventHandler(this.mnuFileOpen_Click);
             // 
-            // menuFileClose
+            // mnuFileClose
             // 
-            this.menuFileClose.Name = "menuFileClose";
-            this.menuFileClose.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
-            this.menuFileClose.Size = new System.Drawing.Size(149, 22);
-            this.menuFileClose.Text = "&Close";
-            this.menuFileClose.Click += new System.EventHandler(this.menuFileClose_Click);
+            this.mnuFileClose.Name = "mnuFileClose";
+            this.mnuFileClose.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
+            this.mnuFileClose.Size = new System.Drawing.Size(149, 22);
+            this.mnuFileClose.Text = "&Close";
+            this.mnuFileClose.Click += new System.EventHandler(this.mnuFileClose_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
             // 
-            // menuFileExit
+            // mnuFileExit
             // 
-            this.menuFileExit.Name = "menuFileExit";
-            this.menuFileExit.Size = new System.Drawing.Size(149, 22);
-            this.menuFileExit.Text = "E&xit";
-            this.menuFileExit.Click += new System.EventHandler(this.menuFileExit_Click);
+            this.mnuFileExit.Name = "mnuFileExit";
+            this.mnuFileExit.Size = new System.Drawing.Size(149, 22);
+            this.mnuFileExit.Text = "E&xit";
+            this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 
-            // menuWindow
+            // mnuWindow
             // 
-            this.menuWindow.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuWindowArrange,
-            this.menuWindowCascade,
-            this.menuWindowHorizontal,
-            this.menuWindowVertical});
-            this.menuWindow.Name = "menuWindow";
-            this.menuWindow.Size = new System.Drawing.Size(63, 20);
-            this.menuWindow.Text = "&Window";
+            this.mnuWindow.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuWindowArrange,
+            this.mnuWindowCascade,
+            this.mnuWindowHozizontal,
+            this.mnuWindowVertical});
+            this.mnuWindow.Name = "mnuWindow";
+            this.mnuWindow.Size = new System.Drawing.Size(63, 20);
+            this.mnuWindow.Text = "&Window";
             // 
-            // menuWindowArrange
+            // mnuWindowArrange
             // 
-            this.menuWindowArrange.Name = "menuWindowArrange";
-            this.menuWindowArrange.Size = new System.Drawing.Size(152, 22);
-            this.menuWindowArrange.Tag = "ArrangeIcons";
-            this.menuWindowArrange.Text = "&ArrangeIcons";
-            this.menuWindowArrange.Click += new System.EventHandler(this.menuWindowItem_Click);
+            this.mnuWindowArrange.Name = "mnuWindowArrange";
+            this.mnuWindowArrange.Size = new System.Drawing.Size(151, 22);
+            this.mnuWindowArrange.Tag = "ArrangeIcons";
+            this.mnuWindowArrange.Text = "&Arrange Icons";
+            this.mnuWindowArrange.Click += new System.EventHandler(this.mnuWindowItem_Click);
             // 
-            // menuWindowCascade
+            // mnuWindowCascade
             // 
-            this.menuWindowCascade.Name = "menuWindowCascade";
-            this.menuWindowCascade.Size = new System.Drawing.Size(152, 22);
-            this.menuWindowCascade.Tag = "Cascade";
-            this.menuWindowCascade.Text = "&Cascade";
-            this.menuWindowCascade.Click += new System.EventHandler(this.menuWindowItem_Click);
+            this.mnuWindowCascade.Name = "mnuWindowCascade";
+            this.mnuWindowCascade.Size = new System.Drawing.Size(151, 22);
+            this.mnuWindowCascade.Tag = "Cascade";
+            this.mnuWindowCascade.Text = "&Cascade";
+            this.mnuWindowCascade.Click += new System.EventHandler(this.mnuWindowItem_Click);
             // 
-            // menuWindowHorizontal
+            // mnuWindowHozizontal
             // 
-            this.menuWindowHorizontal.Name = "menuWindowHorizontal";
-            this.menuWindowHorizontal.Size = new System.Drawing.Size(152, 22);
-            this.menuWindowHorizontal.Tag = "TileHorizontal";
-            this.menuWindowHorizontal.Text = "Tile &Horizontal";
-            this.menuWindowHorizontal.Click += new System.EventHandler(this.menuWindowItem_Click);
+            this.mnuWindowHozizontal.Name = "mnuWindowHozizontal";
+            this.mnuWindowHozizontal.Size = new System.Drawing.Size(151, 22);
+            this.mnuWindowHozizontal.Tag = "TileHorizontal";
+            this.mnuWindowHozizontal.Text = "Tile &Horizontal";
+            this.mnuWindowHozizontal.Click += new System.EventHandler(this.mnuWindowItem_Click);
             // 
-            // menuWindowVertical
+            // mnuWindowVertical
             // 
-            this.menuWindowVertical.Name = "menuWindowVertical";
-            this.menuWindowVertical.Size = new System.Drawing.Size(152, 22);
-            this.menuWindowVertical.Tag = "TileVertical";
-            this.menuWindowVertical.Text = "Tile &Vertical";
-            this.menuWindowVertical.Click += new System.EventHandler(this.menuWindowItem_Click);
+            this.mnuWindowVertical.Name = "mnuWindowVertical";
+            this.mnuWindowVertical.Size = new System.Drawing.Size(151, 22);
+            this.mnuWindowVertical.Tag = "TileVertical";
+            this.mnuWindowVertical.Text = "Tile &Vertical";
+            this.mnuWindowVertical.Click += new System.EventHandler(this.mnuWindowItem_Click);
             // 
             // toolStripParent
             // 
@@ -168,11 +168,10 @@
             this.tsbNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbNew.Image")));
             this.tsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbNew.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
-            this.tsbNew.MergeIndex = 0;
             this.tsbNew.Name = "tsbNew";
             this.tsbNew.Size = new System.Drawing.Size(23, 22);
             this.tsbNew.Text = "New Album";
+            this.tsbNew.ToolTipText = "ToolStripButton1";
             this.tsbNew.Click += new System.EventHandler(this.tsbNew_Click);
             // 
             // tsbOpen
@@ -180,8 +179,6 @@
             this.tsbOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbOpen.Image = ((System.Drawing.Image)(resources.GetObject("tsbOpen.Image")));
             this.tsbOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbOpen.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
-            this.tsbOpen.MergeIndex = 1;
             this.tsbOpen.Name = "tsbOpen";
             this.tsbOpen.Size = new System.Drawing.Size(23, 22);
             this.tsbOpen.Text = "Open Album";
@@ -193,14 +190,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.toolStripParent);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("Location", global::MyPhotos.Properties.Settings.Default, "ParentLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.Location = global::MyPhotos.Properties.Settings.Default.ParentLocation;
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "ParentForm";
             this.Text = "ParentForm";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.toolStripParent.ResumeLayout(false);
             this.toolStripParent.PerformLayout();
             this.ResumeLayout(false);
@@ -210,20 +209,20 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuFile;
-        private System.Windows.Forms.ToolStripMenuItem menuFileNew;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem mnuFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileNew;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem menuFileExit;
-        private System.Windows.Forms.ToolStripMenuItem menuFileOpen;
-        private System.Windows.Forms.ToolStripMenuItem menuFileClose;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileExit;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileOpen;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileClose;
         private System.Windows.Forms.ToolStrip toolStripParent;
         private System.Windows.Forms.ToolStripButton tsbNew;
         private System.Windows.Forms.ToolStripButton tsbOpen;
-        private System.Windows.Forms.ToolStripMenuItem menuWindow;
-        private System.Windows.Forms.ToolStripMenuItem menuWindowArrange;
-        private System.Windows.Forms.ToolStripMenuItem menuWindowCascade;
-        private System.Windows.Forms.ToolStripMenuItem menuWindowHorizontal;
-        private System.Windows.Forms.ToolStripMenuItem menuWindowVertical;
+        private System.Windows.Forms.ToolStripMenuItem mnuWindow;
+        private System.Windows.Forms.ToolStripMenuItem mnuWindowArrange;
+        private System.Windows.Forms.ToolStripMenuItem mnuWindowCascade;
+        private System.Windows.Forms.ToolStripMenuItem mnuWindowHozizontal;
+        private System.Windows.Forms.ToolStripMenuItem mnuWindowVertical;
     }
 }

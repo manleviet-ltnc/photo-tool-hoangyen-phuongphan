@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyPhotos.Properties;
 using Manning.MyPhotoAlbum;
 using Manning.MyPhotoControls;
 
@@ -19,12 +20,12 @@ namespace MyPhotos
             InitializeComponent();
         }
 
-        private void menuFileExit_Click(object sender, EventArgs e)
+        private void mnuFileExit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void menuFileNew_Click(object sender, EventArgs e)
+        private void mnuFileNew_Click(object sender, EventArgs e)
         {
             CreateMdiChild(new MainForm());
         }
@@ -35,7 +36,7 @@ namespace MyPhotos
             child.Show();
         }
 
-        private void menuFileOpen_Click(object sender, EventArgs e)
+        private void mnuFileOpen_Click(object sender, EventArgs e)
         {
             OpenAlbum();
         }
@@ -44,8 +45,7 @@ namespace MyPhotos
         {
             string path = null;
             string pwd = null;
-            if (AlbumController.OpenAlbumDialog(
-            ref path, ref pwd))
+            if (AlbumController.OpenAlbumDialog(ref path, ref pwd))
             {
                 try
                 {
@@ -54,7 +54,6 @@ namespace MyPhotos
                         MainForm mf = f as MainForm;
                         if (mf != null && mf.AlbumPath == path)
                         {
-                            // Show existing child
                             if (mf.WindowState == FormWindowState.Minimized)
                                 mf.WindowState = FormWindowState.Normal;
                             mf.BringToFront();
@@ -62,44 +61,47 @@ namespace MyPhotos
                         }
                     }
 
-                    // Not found, so create a new child
                     CreateMdiChild(new MainForm(path, pwd));
                 }
                 catch (AlbumStorageException aex)
                 {
-                    MessageBox.Show(this,
-                    "Unable to open album " + path + "\n [" + aex.Message + "]", "Open Album Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                    MessageBox.Show(this, "Unable to open album " + path +
+                                    "\n [" + aex.Message + "]", "Open Album Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
                 }
             }
         }
 
-        private void menuFileClose_Click(object sender, EventArgs e)
+        private void mnuFileClose_Click(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
         }
 
-        private void menuFile_DropDownOpening(object sender, EventArgs e)
+        private void mnuFile_DropDownOpening(object sender, EventArgs e)
         {
-            menuFileClose.Enabled= (this.ActiveMdiChild != null);
+            mnuFileClose.Enabled = (ActiveMdiChild != null);
         }
 
         protected override void OnLoad(EventArgs e)
         {
-            ComponentResourceManager resources= new ComponentResourceManager(typeof(MainForm));
-
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(MainForm));
             Image newImage = (Image)resources.GetObject("mnuFileNew.Image");
             Image openImage = (Image)resources.GetObject("mnuFileOpen.Image");
-            menuFileNew.Image = newImage;
-            menuFileOpen.Image = openImage;
+            mnuFileNew.Image = newImage;
+            mnuFileOpen.Image = openImage;
             tsbNew.Image = newImage;
             tsbOpen.Image = openImage;
 
             PixelDialog.GlobalMdiParent = this;
 
             SetTitleBar();
+
+            string name = Settings.Default.LastAlbumPath;
+            if (!string.IsNullOrEmpty(name) && !AlbumStorage.IsEncrypted(name))
+                CreateMdiChild(new MainForm(name, null));
+
             base.OnLoad(e);
         }
 
@@ -119,11 +121,20 @@ namespace MyPhotos
             MainForm f = ActiveMdiChild as MainForm;
             if (f != null)
             {
-                ToolStripManager.Merge(f.MainToolStrip,toolStripParent.Name);
+                ToolStripManager.Merge(f.MainToolStrip, toolStripParent.Name);
                 toolStripParent.ImageList = f.MainToolStrip.ImageList;
+
+                Settings.Default.LastAlbumPath = f.AlbumPath;
             }
+
             SetTitleBar();
             base.OnMdiChildActivate(e);
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Settings.Default.Save();
+            base.OnFormClosing(e);
         }
 
         protected void SetTitleBar()
@@ -133,25 +144,24 @@ namespace MyPhotos
             string childName = "Untitled";
 
             MainForm mf = ActiveMdiChild as MainForm;
-            if (mf != null && !String.IsNullOrEmpty(mf.AlbumTitle))
+            if (mf != null && !String.
+            IsNullOrEmpty(mf.AlbumTitle))
                 childName = mf.AlbumTitle;
             else if (ActiveMdiChild is PixelDialog)
                 childName = "Pixel Data";
-            Text = String.Format(titleBarFormat,childName, ver.Major, ver.Minor);
+
+            Text = String.Format(titleBarFormat, childName, ver.Major, ver.Minor);
         }
 
-        private void menuWindowItem_Click(object sender, EventArgs e)
+        private void mnuWindowItem_Click(object sender, EventArgs e)
         {
             ToolStripItem item = sender as ToolStripItem;
             if (item != null)
             {
                 string enumVal = item.Tag as string;
                 if (enumVal != null)
-                {
                     LayoutMdi((MdiLayout)Enum.Parse(typeof(MdiLayout), enumVal));
-                }
             }
         }
-
     }
 }

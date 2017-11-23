@@ -13,19 +13,5 @@ E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhot
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\bin\Debug\MyPhotoControls.dll
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\bin\Debug\MyPhotoControls.pdb
 E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\obj\Debug\MyPhotos.SlideShowDialog.resources
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\bin\Debug\MyPhotos.exe.config
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\bin\Debug\MyPhotos.exe
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\bin\Debug\MyPhotos.pdb
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\bin\Debug\MyPhotoAlbum.dll
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\bin\Debug\MyPhotoControls.dll
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\bin\Debug\MyPhotoAlbum.pdb
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\bin\Debug\MyPhotoControls.pdb
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.csprojResolveAssemblyReference.cache
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.MainForm.resources
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.Properties.Resources.resources
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.SlideShowDialog.resources
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.csproj.GenerateResource.Cache
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.csproj.CoreCompileInputs.cache
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.exe
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.pdb
-E:\github\photo-tool-hoangyen-phuongphan\MyPhotos\MyPhotos\obj\Debug\MyPhotos.ParentForm.resources
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\obj\Debug\MyPhotos.ParentForm.resources
+E:\Documents\Projects in Visual Studio\photo-tool-kimanh-haquang\MyPhotos\MyPhotos\obj\Debug\MyPhotos.AboutBox.resources

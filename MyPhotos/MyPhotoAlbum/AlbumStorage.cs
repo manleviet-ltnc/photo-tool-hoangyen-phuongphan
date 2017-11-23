@@ -67,7 +67,6 @@ namespace Manning.MyPhotoAlbum
         {
             if (p.Editing)
                 p.EndEdit();
-
             sw.WriteLine(p.FileName);
             sw.WriteLine(p.Caption != null ? p.Caption : "");
             sw.WriteLine(p.DateTaken.ToString());

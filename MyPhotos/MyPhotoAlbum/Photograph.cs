@@ -50,7 +50,7 @@ namespace Manning.MyPhotoAlbum
         {
             get { return _caption; }
             set
-            { 
+            {
                 if (_caption != value)
                 {
                     _caption = value;

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotoAlbum", "MyPhotoAlbu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotoControls", "MyPhotoControls\MyPhotoControls.csproj", "{1B8CB21F-4409-4B7D-857D-C6284E41371E}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MyPhotosSetup", "MyPhotosSetup\MyPhotosSetup.vdproj", "{99598992-E860-4813-AA95-2DE7AA399C8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{1B8CB21F-4409-4B7D-857D-C6284E41371E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B8CB21F-4409-4B7D-857D-C6284E41371E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B8CB21F-4409-4B7D-857D-C6284E41371E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99598992-E860-4813-AA95-2DE7AA399C8B}.Debug|Any CPU.ActiveCfg = Debug
+		{99598992-E860-4813-AA95-2DE7AA399C8B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

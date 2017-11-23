@@ -5,16 +5,16 @@ using System.Windows.Forms;
 
 namespace Manning.MyPhotoControls
 {
-
     [DefaultEvent("Click")]
     [DefaultProperty("Image")]
+    [ToolboxBitmap(typeof(ScrollablePictureBox), "ScrollablePictureBox.bmp")]
     public class ScrollablePictureBox : PictureBox
     {
         private bool _allowScrollBars = true;
         [Browsable(true)]
         [Category("Layout")]
         [DefaultValue(true)]
-        [Description("Gets or Sets Whether the control can display scroll bars ")]
+        [Description("Gets or sets whether the control can display scroll bars")]
         public bool AllowScrollBars
         {
             get { return _allowScrollBars; }
@@ -22,7 +22,6 @@ namespace Manning.MyPhotoControls
             {
                 if (_allowScrollBars != value)
                 {
-                    // Force a redraw when value changes
                     _allowScrollBars = value;
                     Invalidate();
                 }
@@ -30,7 +29,7 @@ namespace Manning.MyPhotoControls
         }
 
         [Category("Action")]
-        [Description("Occurs when a scroll bar is shown and image is scrolled")]
+        [Description("Occurs when a scroll bar is shown and the image is scrolled")]
         public event ScrollEventHandler Scroll;
         protected virtual void OnScroll(ScrollEventArgs e)
         {
@@ -39,17 +38,18 @@ namespace Manning.MyPhotoControls
         }
 
         private HScrollBar _hbar = new HScrollBar();
-        private VScrollBar _vbar = new VScrollBar();
-        private Control _vbarContainer = new Control();
-
         private HScrollBar HBar
         {
             get { return _hbar; }
         }
+
+        private VScrollBar _vbar = new VScrollBar();
         private VScrollBar VBar
         {
             get { return _vbar; }
         }
+
+        private Control _vbarContainer = new Control();
         private Control VContainer
         {
             get { return _vbarContainer; }
@@ -73,24 +73,25 @@ namespace Manning.MyPhotoControls
             HBar.Minimum = 0;
             HBar.Maximum = 1000;
             HBar.Scroll += HandleScroll;
+
             // Initialize vertical scroll bar container
             VContainer.Visible = false;
             VContainer.Width = VBar.Width;
             VContainer.Height = Height;
             VContainer.Dock = DockStyle.Right;
+
             // Initialize vertical scroll bar
             VBar.Top = 0;
             VBar.Left = 0;
             VBar.Height = VContainer.Height - HBar.Height;
-            VBar.Anchor = AnchorStyles.Top
-            | AnchorStyles.Bottom
-            | AnchorStyles.Left
-            | AnchorStyles.Right;
+            VBar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left
+                          | AnchorStyles.Right;
             VBar.Minimum = 0;
             VBar.Maximum = 1000;
             VBar.Scroll += HandleScroll;
 
             VContainer.Controls.Add(VBar);
+
             Controls.Add(HBar);
             Controls.Add(VContainer);
 
@@ -102,6 +103,7 @@ namespace Manning.MyPhotoControls
             Refresh();
             OnScroll(e);
         }
+
         protected override void OnPaint(PaintEventArgs pe)
         {
             base.OnPaint(pe);
@@ -113,11 +115,11 @@ namespace Manning.MyPhotoControls
         private void DrawImage(Graphics g)
         {
             Rectangle targetRect = new Rectangle(0, 0,
-                Math.Min(Right - VBar.Width, Image.Width),
-                Math.Min(Bottom - HBar.Height, Image.Height));
+                                                 Math.Min(Right - VBar.Width, Image.Width),
+                                                 Math.Min(Bottom - HBar.Height, Image.Height));
             Rectangle sourceRect = new Rectangle(HBar.Value, VBar.Value,
-                Math.Min(Right - VBar.Width, Image.Width),
-                Math.Min(Bottom - HBar.Height, Image.Height));
+                                                 Math.Min(Right - VBar.Width, Image.Width),
+                                                 Math.Min(Bottom - HBar.Height, Image.Height));
             if (SizeMode == PictureBoxSizeMode.CenterImage)
             {
                 Point p = new Point(0, 0);
@@ -125,16 +127,15 @@ namespace Manning.MyPhotoControls
                     p.X = Math.Max((ClientSize.Width - targetRect.Width) / 2, 0);
                 if (Bottom - HBar.Height > Image.Height)
                     p.Y = Math.Max((ClientSize.Height - targetRect.Height) / 2, 0);
-
                 targetRect.Offset(p);
             }
-            g.DrawImage(Image, targetRect, sourceRect,
-            GraphicsUnit.Pixel);
+            g.DrawImage(Image, targetRect, sourceRect, GraphicsUnit.Pixel);
         }
+
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            // Force redraw when scrolling
+
             if (ScrollingActive())
             {
                 AdjustScrollBars();
@@ -144,17 +145,19 @@ namespace Manning.MyPhotoControls
 
         private bool ScrollingActive()
         {
-            if (Image == null || AllowScrollBars == false || (SizeMode != PictureBoxSizeMode.CenterImage && SizeMode != PictureBoxSizeMode.Normal))
+            if (Image == null || AllowScrollBars == false
+                ||(SizeMode != PictureBoxSizeMode.CenterImage
+                && SizeMode != PictureBoxSizeMode.Normal))
             {
                 HBar.Visible = false;
                 VContainer.Visible = false;
             }
             else
             {
-                // Show scroll bars if partial image shown
                 HBar.Visible = Image.Width >= ClientSize.Width - VBar.Width;
                 VContainer.Visible = Image.Height >= ClientSize.Height - HBar.Height;
             }
+
             return (HBar.Visible || VContainer.Visible);
         }
 
@@ -169,6 +172,7 @@ namespace Manning.MyPhotoControls
                 if (VBar.Visible)
                     HBar.Maximum += VBar.Width;
             }
+
             if (VContainer.Visible)
             {
                 if (HBar.Visible)
@@ -179,7 +183,6 @@ namespace Manning.MyPhotoControls
                 int max = Image.Height - ClientSize.Height;
                 VBar.LargeChange = Math.Max(max / 10, 1);
                 VBar.SmallChange = Math.Max(max / 20, 1);
-
                 VBar.Maximum = max + VBar.LargeChange;
                 if (HBar.Visible)
                     VBar.Maximum += HBar.Height;
@@ -194,10 +197,8 @@ namespace Manning.MyPhotoControls
 
         private void ResetScrollBars()
         {
-            // Reset scroll values
             HBar.Value = 0;
             VBar.Value = 0;
-
             if (Image != null && ScrollingActive())
             {
                 AdjustScrollBars();
@@ -208,6 +209,5 @@ namespace Manning.MyPhotoControls
                 }
             }
         }
-
     }
 }

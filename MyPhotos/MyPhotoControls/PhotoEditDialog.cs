@@ -89,7 +89,7 @@ namespace Manning.MyPhotoControls
             Photograph photo = Photo;
             if (photo != null)
             {
-                photo.BeginEdit();
+                Photo.BeginEdit();
 
                 photo.Caption = txtCaption.Text;
                 photo.Photographer = cboPhotographer.Text;
@@ -100,7 +100,7 @@ namespace Manning.MyPhotoControls
                 }
                 catch (FormatException) { }
 
-                photo.EndEdit();
+                Photo.EndEdit();
             }
         }
 
